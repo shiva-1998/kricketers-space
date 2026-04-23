@@ -1,0 +1,499 @@
+
+
+
+
+/* Layout Split */
+
+
+.registration-page {
+    background-color: #05161d;
+    overflow: hidden;
+}
+
+.registration-heading {
+    color: #fff;
+  
+    font-size: 40px;
+    font-weight: regular;
+    font-family: "sportstars";
+  
+}
+
+
+.registration-heading  span {
+    color: var(--p);
+}
+
+.left-panel {
+     background: linear-gradient(rgb(0 0 0 / 31%), rgb(0 0 0 / 31%)), url(../img/reg-bg.webp) center / cover no-repeat;
+    position: relative;
+    background-size: cover;
+    background-position: 0px -300px;
+    /* background-repeat: repeat; */
+}
+
+/* Diagonal Separator Overlay */
+.left-panel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50px;
+    height: 100%;
+    width: 100px;
+    background: #05161d;
+    transform: skewX(-5deg);
+    z-index: 1;
+}
+
+.right-panel {
+    background-color: #05161d;
+    z-index: 2;
+}
+
+/* Typography */
+.hero-text {
+    line-height: 0.9;
+    letter-spacing: -2px;
+}
+
+.italic-heading {
+    font-style: italic;
+    font-weight: 900;
+}
+
+/* Role Selection Cards */
+.role-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid transparent;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+    color: white;
+}
+
+/* Hover & Active States */
+.btn-check:checked + .role-card {
+    background: rgba(0, 188, 212, 0.1);
+    border: 1px solid rgba(0, 188, 212, 0.5);
+}
+
+.role-icon-wrap {
+    width: 100px;
+    text-align: center;
+    opacity: 0.7;   
+}
+
+.role-card img {
+    width: 180px;
+   
+}
+
+.btn-check:checked + .role-card .role-icon-wrap {
+    opacity: 1;
+}
+
+/* Sub-branding */
+.brand-logo {
+    width: 60px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .left-panel::after { display: none; }
+}
+
+.reg_from_heading{
+      color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    font-family: 'SpaceGrotesk';
+    margin-bottom: 5px;
+}
+
+.reg_from_subheading{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'SpaceGrotesk';
+    margin-bottom: 25px;
+}
+
+
+/* Section Background */
+.signup-section {
+    background: radial-gradient(circle at center, #0a2d36 0%, #000000 100%);
+    min-height: 80vh;
+}
+
+/* Custom Input Styling */
+.custom-input-wrap {
+    background: #0b1e24; /* Darker teal background for input */
+    padding: 1px; /* Border thickness */
+    /* Clipped corner for the container */
+    clip-path: polygon(0 0, 92% 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+.custom-input {
+    background-color: #0b1e24 !important;
+    border: none !important;
+    color: white !important;
+    padding: 12px 20px;
+    /* height: 60px; */
+    border-radius: 0 !important;
+    /* Clipped corner for the input itself to match container */
+    clip-path: polygon(0 0, 92% 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+.custom-input:focus {
+    box-shadow: none;
+    background-color: #0f2a33 !important;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+/* Label Styling */
+.form-label {
+    /* text-transform: uppercase; */
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-family: 'SpaceGrotesk';
+    
+}
+
+/* Section Background */
+.otp-section {
+    background-color: #05161d;
+    min-height: 50vh;
+}
+
+/* Individual OTP Digit Box */
+.otp-box-wrap {
+    flex: 1;
+    background: #0b1e24;
+    padding: 1px;
+    /* Notched top-right corner */
+    clip-path: polygon(0 0, 75% 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+.otp-input {
+    background-color: #0b1e24 !important;
+    border: 1px solid transparent !important;
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    height: 45px;
+    border-radius: 0 !important;
+    clip-path: polygon(0 0, 75% 0, 100% 25%, 100% 100%, 0 100%);
+    transition: all 0.2s ease;
+}
+
+/* Active/Focused State Border */
+.otp-input:focus {
+    box-shadow: none;
+    border: 1px solid #00bcd4 !important;
+    background-color: #0f2a33 !important;
+}
+
+/* Background Glow */
+.password-section {
+    background: radial-gradient(circle at center, #0a2d36 0%, #000000 100%);
+    min-height: 80vh;
+}
+
+/* Page Header Effect */
+.ghost-title-small {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
+
+/* Custom Input Container with Notched Corner */
+.custom-input-wrap {
+    background: #0b1e24; 
+    padding: 1px;
+    clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+
+
+.custom-input:focus {
+    box-shadow: none;
+    background-color: #0f2a33 !important;
+}
+
+/* Styled specifically to look like bullets in the image */
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+}
+
+
+
+/* Custom Input with Notched Corner */
+.custom-input-wrap {
+    background: #0b1e24;
+    clip-path: polygon(0 0, 92% 0, 100% 25%, 100% 100%, 0 100%);
+    margin-bottom: 1rem;
+}
+
+
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Phone Number specific styling */
+.country-select {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Progress Bar Styling */
+.custom-progress-bar {
+    height: 4px;
+    background: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #00bcd4; /* Brand Cyan */
+    transition: width 0.3s ease;
+}
+
+
+
+/* Typography from Request */
+.reg_from_heading {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+}
+
+.reg_from_subheading {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* Custom Input/Select Container with Notched Corner */
+.custom-input-wrap {
+    background: #0b1e24;
+    clip-path: polygon(0 0, 92% 0, 100% 25%, 100% 100%, 0 100%);
+    margin-bottom: 1rem;
+}
+
+
+/* Custom Arrow Icon */
+.select-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    pointer-events: none;
+}
+
+/* Progress Bar Styling for Step 2 */
+.custom-progress-bar {
+    height: 4px;
+    background: #1a1a1a;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #00bcd4; /* Brand Cyan */
+    transition: width 0.3s ease;
+}
+
+
+
+/* Notched Dropzone with Dashed Border */
+.upload-dropzone {
+    background: rgba(11, 30, 36, 0.4);
+    position: relative;
+    /* Creating the notched look */
+    clip-path: polygon(0 0, 70% 0, 100% 30%, 100% 100%, 0 100%);
+    border: 2px dashed #00bcd4; /* Branded Cyan dashed border */
+    min-height: 200px;
+}
+
+/* Preview Image Box */
+.preview-box {
+    width: 120px;
+    height: 120px;
+    background: #071a21;
+    overflow: hidden;
+}
+
+/* Custom Outlined Notched Button */
+.cta-secondary-notched {
+    background: #0b1e24;
+    color: #ffffff;
+    border: none;
+    padding: 8px 25px;
+    font-size: 0.9rem;
+    clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 0 100%);
+    transition: 0.3s;
+}
+
+.cta-secondary-notched:hover {
+    background: #15313a;
+}
+
+/* Progress Bar Styling for Step 3 */
+.custom-progress-bar {
+    height: 4px;
+    background: #1a1a1a;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #00bcd4; /* Brand Cyan */
+    transition: width 0.3s ease;
+}
+
+
+
+/* Typography from Request */
+.reg_from_heading {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+
+}
+
+.reg_from_subheading {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Notched Dropzone with Dashed Border */
+.upload-dropzone {
+    background: rgba(11, 30, 36, 0.4);
+    position: relative;
+    /* Creating the notched look */
+    clip-path: polygon(0 0, 70% 0, 100% 30%, 100% 100%, 0 100%);
+    border: 2px dashed #00bcd4; /* Branded Cyan dashed border */
+    min-height: 200px;
+}
+
+/* Preview Image Box */
+.preview-box {
+    width: 120px;
+    height: 120px;
+    background: #071a21;
+    overflow: hidden;
+}
+
+/* Custom Outlined Notched Button */
+.cta-secondary-notched {
+    background: #0b1e24;
+    color: #ffffff;
+    border: none;
+    padding: 8px 25px;
+    font-size: 0.9rem;
+    clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 0 100%);
+    transition: 0.3s;
+}
+
+.cta-secondary-notched:hover {
+    background: #15313a;
+}
+
+/* Progress Bar Styling for Step 3 */
+.custom-progress-bar {
+    height: 4px;
+    background: #1a1a1a;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #00bcd4; /* Brand Cyan */
+    transition: width 0.3s ease;
+}
+
+
+
+
+/* Custom Input Container */
+.custom-input-wrap {
+    background: #0b1e24;
+    clip-path: polygon(0 0, 92% 0, 100% 25%, 100% 100%, 0 100%);
+    margin-bottom: 1rem;
+}
+
+
+
+/* Logo Upload Area with Dashed Notched Border */
+.upload-dropzone {
+    background: rgba(11, 30, 36, 0.4);
+    min-height: 120px;
+    border: 2px dashed #00bcd4;
+    clip-path: polygon(0 0, 90% 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+/* Secondary Button style for 'Choose Photo' */
+.cta-secondary-notched {
+    background: #071a21;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+/* Final Progress Bar - 100% */
+.custom-progress-bar {
+    height: 4px;
+    background: #1a1a1a;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #00bcd4;
+    transition: width 0.3s ease;
+}
+
+
+
+/* Status Card Notched Geometry */
+.status-card-wrap {
+    background: #0b1e24;
+    padding: 1px;
+    clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+.status-card {
+    background-color: #0b1e24;
+    height: 140px;
+    clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+/* Specific Status Colors */
+.status-value {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.text-purple {
+    color: #a855f7; /* Matching the 2026 Season color */
+}
+
+.text-green {
+    color: #22c55e; /* Matching the Active status color */
+}
+
+

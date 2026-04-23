@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\TournamentController;
+use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\PlayerController;
+use App\Http\Controllers\Admin\MatchController;
+use App\Http\Controllers\Admin\GroundController;
+use App\Http\Controllers\Admin\PaymentController;
+use App\Http\Controllers\Admin\ReportController;
+
+
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+
+
+
+
+Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::middleware('admin')->group(function () {
+    Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+    Route::resource('tournaments', TournamentController::class);
+    Route::get('/player-info/{id}', [TournamentController::class, 'playerInfo'])->name('player.info');
+    Route::resource('teams', TeamController::class);
+    Route::resource('players', PlayerController::class);
+    Route::resource('matches', MatchController::class);
+    Route::resource('grounds', GroundController::class);
+    Route::get('payments', [PaymentController::class, 'index'])->name('payments.index');
+    Route::get('reports', [ReportController::class, 'index'])->name('reports.index');
+});

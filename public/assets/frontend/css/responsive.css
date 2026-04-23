@@ -1,0 +1,47 @@
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+  .footer-desc {
+    max-width: 100%;
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+      font-size: 3rem;
+    }
+  }
+
+  /* Responsive Fix for Mobile */
+@media (max-width: 767px) {
+    .border-start-custom {
+      border-left: none;
+      border-top: 1px solid #00bcd4;
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+    .counter-number {
+      font-size: 3.5rem;
+    }
+  }
+
+  
+@media (max-width: 991.98px) {
+    .site-header__collapse {
+      width: 100%;
+    }
+  
+    .site-header__links {
+      align-items: stretch;
+    }
+  
+    .site-header__link {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  
+    .site-header__link.active {
+      border-bottom-color: transparent;
+      border-left: 3px solid #00bcd4;
+      padding-left: 0.75rem !important;
+    }
+  }

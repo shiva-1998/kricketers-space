@@ -1,0 +1,120 @@
+
+:root {
+    --p: #00bcd4;
+    --s: #0a191e;
+    --bg: #06141B;
+    --accent-color: #00ff88;
+    --text-color: #ffffff;
+    --muted-text-color: #94a3b8;
+    --background-gradient: radial-gradient(circle at center, #0a2d36 0%, #000000 100%);
+}
+
+
+
+.innerpage_banner_heading {
+     text-align: center;
+    font-size: 50px;
+    font-family: 'SportStars';
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.innerpage-banner{
+        background-image: url(../img/inner_page_ban.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 36%) 0 0 0 1000px inset;
+    box-shadow: rgb(0 0 0 / 46%) 0 0 0 1000px inset;
+    padding-top: 100px;}
+
+.innerpage-banner p {
+    font-size: 23px;
+    color: #fff;
+    text-align: center;
+    font-family: 'SpaceGrotesk';
+}
+
+.innerpage_banner_heading span {
+    color: var(--p);
+}
+
+
+
+
+/* Filter Bar Styling */
+.filter-bar {
+    background: #01080a;
+    border: 1px solid var(--border-color);
+    clip-path: polygon(0 0, 98% 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+/* Filter Bar Specifics */
+.filter-wrapper {
+     background: #0c222e;
+    border: 1px solid var(--border);
+    clip-path: polygon(0 0, 98% 0, 100% 30%, 100% 100%, 0 100%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-control, .form-select {
+    background-color: transparent !important;
+    border: 1px solid var(--border) !important;
+    color: white !important;
+    border-radius: 0;
+}
+
+.search-filter-section option{
+color: #000;
+    
+}
+
+.btn-apply-filters {
+    background-color: var(--p);
+    color: black;
+    border: none;
+    clip-path: polygon(0 0, 85% 0, 100% 35%, 100% 100%, 0 100%);
+}
+/* Card Styling */
+.tournament-card {
+    background: #071a21; 
+    border: 1px solid #1a3a44;
+    transition: all 0.3s ease;
+}
+
+.tournament-card:hover {
+    border-color: #00bcd4;
+    transform: translateY(-5px);
+}
+
+.league-logo { width: 45px; height: auto; object-fit: contain; }
+
+/* Status Badges */
+.status-badge {
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+}
+.status-badge::before { content: '< '; } /* Matches the icon in image */
+
+.status-open { color: #22c55e; }
+.status-soon { color: #00bcd4; }
+.status-live { color: #ef4444; }
+
+/* Internal Card Elements */
+.date-chip {
+       background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #1a3a44;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    display: inline-block;
+    font-family: 'SpaceGrotesk';
+}

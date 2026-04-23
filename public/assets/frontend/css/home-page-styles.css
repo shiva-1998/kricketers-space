@@ -1,0 +1,1179 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --p: #00bcd4;
+    --s: #0a191e;
+    --bg: #06141B;
+    --accent-color: #00ff88;
+    --text-color: #ffffff;
+    --muted-text-color: #94a3b8;
+    --background-gradient: radial-gradient(circle at center, #0a2d36 0%, #000000 100%);
+}
+
+p {
+  
+    margin: 0px;
+}
+
+@font-face {
+    font-family: 'SportStars';
+    src: url('../fonts/sportstars-font/sportstars.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Regular/Normal */
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url("../fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Medium */
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url("../fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Semi-Bold */
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url("../fonts/Space_Grotesk/static/SpaceGrotesk-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url("../fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Light (if available) */
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url("../fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+img.logo-img {
+  width: 80px;
+}
+
+
+.cta1 {
+  /* Background and Shape */
+  background-color: #00b8d4; /* Vivid cyan/teal color */
+  border: none;
+  cursor: pointer;
+  
+  /* The Diagonal Cut */
+  /* This creates a point at the top right before cutting down */
+  clip-path: polygon(0% 0%, 85% 0%, 100% 35%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 85% 0%, 100% 35%, 100% 100%, 0% 100%);
+  /* Text Styling */
+  color: #000000;
+font-family: 'SpaceGrotesk';
+  font-size: 16px;
+  font-weight: 500;
+  
+  /* Sizing and Spacing */
+  padding: 8px 20px;
+  min-width: 160px;
+  transition: background-color 0.3s ease;
+}
+
+.cta1:hover {
+  background-color: #009eb7; /* Slightly darker on hover */
+}
+
+
+.cta2 {
+ /* Layout & Typography */
+  display: inline-block;
+  padding: 8px 20px;
+  min-width: 200px;
+  background: transparent;
+  color: #00bcd4;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+
+/* The SVG Border Background */
+.cta2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+  /* SVG Explanation:
+     - We use 'vector-effect="non-scaling-stroke"' so the border stays 2px thick even if resized.
+     - The path starts at 1,1 and ends at 99%,99% to keep the border inside the view.
+  */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M1,1 L85,1 L99,25 L99,99 L1,99 Z' fill='none' stroke='%2300bcd4' stroke-width='2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+/* Hover State */
+.cta2:hover {
+  color: #fff;
+  background-color: rgba(0, 188, 212, 0.1);
+}
+
+/* Footer Background and Text Base */
+.custom-footer {
+  background-color: #0a191e; /* Deep navy/dark teal background */
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Logo Description Styling */
+.footer-desc {
+  color: #adb5bd; /* Muted grayish text */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+/* Column Headings */
+.footer-heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+/* List and Link Styling */
+.custom-footer ul li {
+  margin-bottom: 0.6rem;
+}
+
+.custom-footer ul li a {
+  color: #94a3b8; /* Muted blue-grey */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.custom-footer ul li a:hover {
+  color: #00bcd4; /* Accent color from your buttons */
+}
+
+/* Bottom Copyright Bar */
+.border-top {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.copyright-text {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+
+/* Fonts & Colors */
+.grounds-section {
+  background-color: var(--bg) !important;
+  font-family: 'Inter', sans-serif;
+}
+
+.italic-heading {
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Ground Card Styling */
+.ground-card {
+  background-color: #071a21; /* Dark teal/black from image */
+  border-radius: 0;
+  height: 100%;
+}
+
+.ground-card img {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #00bcd4;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Status Tags */
+.status-tag {
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+.status-tag.available { color: #00ff88; }
+.status-tag.full { color: #ff4d4d; }
+
+.location-text {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Time Slots */
+.slot-label {
+  color: #adb5bd;
+  font-size: 0.85rem;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.slot {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border: 1px solid rgba(0, 188, 212, 0.3);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.slot.disabled {
+  opacity: 0.2;
+}
+
+/* Buttons (Using the clipped corner logic we built) */
+.btn-confirm {
+  background-color: #00bcd4;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  padding: 12px;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 30%, 100% 100%, 0% 100%);
+  transition: 0.3s;
+}
+
+.btn-confirm:hover {
+  background-color: #00e5ff;
+}
+
+.btn-all-grounds {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  position: relative;
+}
+
+/* Outline clipped button for "All Grounds" */
+.btn-all-grounds::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #ffffff66;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 30%, 100% 100%, 0% 100%);
+}
+
+/* Styling the Section */
+.live-scores-section {
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.real-time-label {
+  color: #00bcd4;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.section-title {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1); /* Ghost text effect */
+  text-transform: uppercase;
+  margin-top: -10px;
+}
+
+.italic-heading {
+  font-style: italic;
+  font-weight: 900;
+}
+
+/* Card Geometry */
+.score-card {
+  position: relative;
+  background: transparent;
+  padding: 2px; /* This creates the border thickness */
+  min-height: 300px;
+}
+
+.card-inner {
+  background-color: #071a21; /* Dark navy background */
+  padding: 25px;
+  height: 100%;
+  clip-path: polygon(0% 0%, 95% 0%, 100% 5%, 100% 100%, 0% 100%);
+}
+
+/* Border using the SVG trick for transparency and sharp corners */
+.score-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* Using the SVG border we refined earlier */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M1,1 L95,1 L99,5 L99,99 L1,99 Z' fill='none' stroke='%2300bcd4' stroke-width='1' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+}
+
+/* Specific border colors for match status */
+.live-border::before { filter: hue-rotate(160deg); } /* Adjust color to match red/cyan */
+.upcoming-border::before { filter: brightness(0.5); }
+
+/* Typography inside cards */
+.team-name {
+      font-weight: 700;
+    font-size: 1.4rem;
+    font-family: 'SpaceGrotesk';
+}
+
+.score {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.score small {
+  font-size: 0.85rem;
+  color: #00bcd4;
+  font-weight: 400;
+}
+
+.divider {
+  border-color: rgba(0, 188, 212, 0.3);
+  opacity: 1;
+}
+
+.match-location {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 10px;
+}
+
+/* View All Button */
+.view-all-btn {
+  background: transparent;
+  color: #00bcd4;
+  border: 1px solid #00bcd4;
+  padding: 10px 30px;
+  clip-path: polygon(0% 0%, 92% 0%, 100% 30%, 100% 100%, 0% 100%);
+  font-size: 0.9rem;
+}
+
+
+.teams-section {
+  overflow: hidden;
+}
+
+/* Header Styling */
+.sub-label {
+  color: #00bcd4;
+  font-weight: 600;
+  display: block;
+}
+
+.ghost-title {
+  font-size: 5rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.05); /* Very faint ghost text */
+  margin-top: -15px;
+  letter-spacing: -2px;
+}
+
+/* Team Card Design */
+.team-card {
+  position: relative;
+  background: transparent;
+  padding: 1.5px; /* Border thickness */
+  font-family: 'SpaceGrotesk';
+}
+
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M1,1 L96,1 L99,4 L99,99 L1,99 Z' fill='none' stroke='%2300bcd4' stroke-width='1' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+.card-inner {
+  background-color: #071a21;
+  padding: 25px;
+  clip-path: polygon(0% 0%, 96% 0%, 100% 4%, 100% 100%, 0% 100%);
+}
+
+/* Logo and Stats */
+.team-logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.stats {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.stats .win { color: #00ff88; }
+.stats .loss { color: #ff4d4d; }
+
+/* Text Content */
+.team-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.company-name {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.captain-section .label {
+  color: #64748b;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.captain-name {
+  font-size: 1.2rem;
+  margin: 4px 0;
+}
+
+.player-count {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* Squad Button */
+.btn-squad {
+  background: #0a1f26; /* Darker than card */
+  color: #64748b;
+  border: none;
+  padding: 10px;
+  font-size: 0.9rem;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 40%, 100% 100%, 0% 100%);
+  transition: 0.3s;
+}
+
+.btn-squad:hover {
+  background: #0d2b35;
+  color: #fff;
+}
+
+/* Section Background */
+.teams-section {
+  background-color: #000;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Heading Typography */
+.ghost-title {
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.04);
+  text-transform: uppercase;
+  margin-top: -15px;
+  letter-spacing: -3px;
+}
+
+.italic-heading { font-style: italic; }
+
+/* The Card Border Logic (SVG Mask) */
+.team-card {
+  position: relative;
+  padding: 1.5px;
+  background: transparent;
+}
+
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  /* This creates the sharp corner cut with a 1px border */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M1,1 L96,1 L99,4 L99,99 L1,99 Z' fill='none' stroke='%2300bcd4' stroke-width='1' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+.card-inner {
+  background-color: #071a21; /* Match the dark teal from the UI */
+  padding: 24px;
+  height: 100%;
+  /* Clips the content inside to match the SVG border */
+  clip-path: polygon(0% 0%, 96% 0%, 100% 4%, 100% 100%, 0% 100%);
+}
+
+/* Elements inside Card */
+.team-logo {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+}
+
+.team-name { font-weight: 700; font-size: 1.4rem; }
+.company-text { color: #8a99af; font-size: 0.9rem; }
+.captain-name { font-weight: 600; margin-bottom: 0; }
+
+/* The View Squad Button */
+.btn-squad-action {
+  background-color: #0a1f26; /* Darker than the card background */
+  color: #8a99af;
+  border: none;
+  padding: 10px;
+  font-size: 0.85rem;
+  clip-path: polygon(0% 0%, 92% 0%, 100% 40%, 100% 100%, 0% 100%);
+  transition: 0.3s ease;
+}
+
+.btn-squad-action:hover {
+  background-color: #102e38;
+  color: #fff;
+}
+
+/* Header Action Button */
+.btn-outline-clipped {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(0, 188, 212, 0.4);
+  padding: 10px 30px;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 30%, 100% 100%, 0% 100%);
+  font-size: 0.9rem;
+}
+
+/* Responsive Overrides */
+@media (max-width: 991px) {
+  .ghost-title { font-size: 3.5rem; }
+}
+
+.get-started-section {
+  background: radial-gradient(circle at center, #0a2d36 0%, #000000 100%);
+  min-height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Typography */
+.hero-title {
+  font-size: clamp(3rem, 8vw, 5.5rem); /* Fluid typography */
+  line-height: 1;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Specific color for the second line of text */
+.hero-title br + text, 
+.hero-title {
+  color: #fff;
+}
+
+/* You can target specific words or lines if they are wrapped in spans */
+.hero-title {
+  /* Creating the cyan glow/fill for the second line */
+  background: linear-gradient(to bottom, #fff 50%, #00bcd4 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Note: If the image shows solid cyan for the second line, 
+     it's better to wrap that text in a <span> with color: #00bcd4; */
+}
+
+/* Header Accent (The little arrow/triangle) */
+.header-accent {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid #00bcd4;
+  display: inline-block;
+}
+
+/* Decorative Bolts */
+.bolt-left, .bolt-right {
+  position: absolute;
+  top: 10%;
+  width: 100px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+.bolt-left {
+  left: 20px;
+  background-image: url('bolt-left.png'); /* Replace with your asset */
+}
+
+.bolt-right {
+  right: 20px;
+  background-image: url('bolt-right.png'); /* Replace with your asset */
+}
+
+.counters-section {
+  background-color: #000;
+  padding: 80px 0;
+}
+
+.counter-item {
+  padding: 20px 40px;
+  text-align: left;
+}
+
+.counter-label {
+     color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-family: 'SpaceGrotesk';
+}
+
+.counter-number {
+    font-size: 3rem;
+    font-weight: 500;
+    /* font-style: italic; */
+    color: #e2e8f0;
+    line-height: 1;
+    font-family: 'SportStars';
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(226, 232, 240, 0.1);
+}
+
+/* Custom Vertical Dividers */
+.border-start-custom {
+  border-left: 1px solid #00bcd4; /* Cyan divider from your theme */
+}
+
+/* Decorative Lightning Bolts */
+.bolt-decor {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.left-bolt {
+  left: -60px;
+  background-image: url('data:image/svg+xml;utf8,<svg ...>Your Lightning SVG</svg>');
+}
+
+.right-bolt {
+  right: -60px;
+  background-image: url('...');
+}
+
+
+
+/* Typography */
+.main-heading {
+  position: relative;
+  z-index: 1;
+}
+
+.ghost-title {
+  font-size: clamp(3rem, 10vw, 6rem);
+  color: rgba(255, 255, 255, 0.05);
+  text-transform: uppercase;
+  margin-top: -20px;
+}
+
+.italic-heading {
+  font-style: italic;
+  font-weight: 900;
+}
+
+/* Counters */
+.counter-text {
+  font-size: 3.5rem;
+  color: #e2e8f0;
+  letter-spacing: -2px;
+}
+
+/* Card Clipped Border */
+.tournament-card {
+  position: relative;
+  background: transparent;
+  padding: 1px;
+}
+
+.tournament-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cpath d='M1,1 L95,1 L99,5 L99,99 L1,99 Z' fill='none' stroke='%2300bcd4' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+.card-inner {
+  background-color: #071a21;
+  clip-path: polygon(0% 0%, 95% 0%, 100% 5%, 100% 100%, 0% 100%);
+  color: white;
+}
+
+/* Hero Title Scaling */
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1.1;
+}
+
+/* Responsive Borders */
+@media (max-width: 767px) {
+  .border-end { border: none !important; border-bottom: 1px solid #00bcd4 !important; }
+}
+
+/* Ghost Typography */
+.ghost-title {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.05);
+  text-transform: uppercase;
+  margin-top: -25px;
+}
+
+/* Card Geometry */
+.tournament-card {
+  background-color: #05161d;
+  border: 1px solid #00bcd4;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card-inner {
+  padding: 25px;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+}
+
+/* Internal Stats Grid */
+.tournament-stats {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-box {
+  flex: 1;
+  padding: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.stat-box span {
+  display: block;
+  font-weight: bold;
+  color: #fff;
+}
+
+.stat-box small {
+  color: #6c757d;
+  font-size: 0.75rem;
+}
+
+/* Status Badges */
+.status-badge {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.status-badge.open { color: #00ff88; }
+.status-badge.soon { color: #00bcd4; }
+.status-badge.live { color: #ff4d4d; }
+
+/* Inactive button style */
+.cta-closed {
+  background: rgba(255, 255, 255, 0.05);
+  color: #6c757d;
+  border: none;
+  padding: 12px;
+  cursor: not-allowed;
+}
+
+/* Section Background */
+.one-platform-section {
+  background: radial-gradient(circle at center, #0a2d36 0%, #000000 100%);
+  min-height: 400px;
+  overflow: hidden;
+}
+
+/* Heading Styling */
+.main-heading {
+     font-size: 40px;
+    font-weight: 500;
+
+    /* letter-spacing: -1px; */
+    /* font-family: SportStars, 'Arial Black', sans-serif; */
+    font-family: SportStars;
+    color: #fff;
+}
+
+.sub-heading {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  font-family: 'SpaceGrotesk', sans-serif;
+}
+
+.italic-heading {
+  font-style: italic;
+}
+
+/* Clipped Navigation Links */
+.platform-link {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  position: relative;
+  padding-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.link-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 15px;
+}
+
+/* The Clipped Bottom Border Effect */
+.platform-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00bcd4;
+  /* This creates the angular "notched" look at the end of the line */
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+}
+
+.platform-link:hover {
+  color: #00bcd4;
+  transform: translateY(-5px);
+}
+
+.platform-link:hover i {
+  color: #ffffff;
+}
+
+/* Decorative Lightning Bolts */
+.bolt {
+  position: absolute;
+  top: 20px;
+  width: 60px;
+  height: 120px;
+  background-color: #00bcd4;
+  /* Geometric lightning bolt shape */
+  clip-path: polygon(40% 0%, 100% 0%, 60% 40%, 100% 40%, 0% 100%, 40% 60%, 0% 60%);
+  opacity: 0.8;
+}
+
+.bolt-left { left: 30px; }
+.bolt-right { right: 30px; transform: scaleX(-1); }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
+  .link-content {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+}
+
+/* Container and Ghost Title */
+.gallery-section {
+  background-color: #000;
+}
+
+.ghost-title {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.05);
+  text-transform: uppercase;
+  margin-top: -20px;
+  letter-spacing: -2px;
+}
+
+/* The CSS Grid Layout */
+.masonry-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  grid-template-areas: 
+      "img1 img2 img3 img3"
+      "img4 img5 img3 img3"
+      "img4 img5 text text";
+}
+
+/* Individual Grid Areas */
+.item-1 { grid-area: img1; }
+.item-2 { grid-area: img2; }
+.item-3 { grid-area: img3; } /* Large featured image */
+.item-4 { grid-area: img4; }
+.item-5 { grid-area: img5; }
+.item-text { grid-area: text; }
+
+/* Image Styling */
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.grid-item {
+  overflow: hidden;
+  background: #071a21; /* Fallback color */
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Description Text */
+.gallery-info p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .masonry-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+          "img3 img3"
+          "img1 img2"
+          "img4 img5"
+          "text text";
+      grid-template-rows: auto;
+  }
+  .grid-item { height: 250px; }
+  .item-3 { height: 400px; }
+  .item-text { height: auto; }
+}
+
+@media (max-width: 576px) {
+  .masonry-grid {
+      display: block;
+  }
+  .grid-item {
+      margin-bottom: 15px;
+      height: 300px;
+  }
+}
+
+.top-performers-section {
+  background: radial-gradient(circle at center, #0a2d36 0%, #000000 100%);
+  position: relative;
+}
+
+/* Player Image Wrapper with Clipped Corners */
+.player-image-wrap {
+  position: relative;
+  padding: 2px;
+  background: #00bcd4;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%);
+}
+
+.player-img {
+  width: 320px;
+  height: 380px;
+  object-fit: cover;
+  background: #071a21;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%);
+}
+
+/* Stats Styling */
+.rank-number {
+  font-size: 5rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 0.8;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.player-name {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    font-family: 'SpaceGrotesk';
+}
+
+.stat-highlight {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.highest-score-label {
+  color: #00ff88;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Custom Navigation Buttons */
+.custom-nav {
+  width: 45px;
+  height: 40px;
+  border: 1px solid #00bcd4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
+  transition: 0.3s;
+}
+
+.custom-nav:hover {
+  background: #00bcd4;
+}
+
+/* Stats Mini Grid */
+.stats-mini-grid {
+  max-width: 350px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* —— Site header (front nav) —— */
+.site-header {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+padding: 0px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-header .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.site-header__link {
+  color: #fff !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-header__link:hover,
+.site-header__link:focus {
+  color: #00bcd4 !important;
+}
+
+.site-header__link.active {
+  color: #00bcd4 !important;
+  border-bottom-color: #00bcd4;
+}
+
+.site-header__link.dropdown-toggle::after {
+  display: none;
+}
+
+.site-header__chevron {
+  font-size: 0.65rem;
+  opacity: 0.9;
+}
+
+.site-header__dropdown {
+  margin-top: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.35rem;
+  padding: 0.35rem 0;
+  min-width: 11rem;
+}
+
+.site-header__dropdown .dropdown-item {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  padding: 0.45rem 1rem;
+}
+
+.site-header__dropdown .dropdown-item:hover,
+.site-header__dropdown .dropdown-item:focus {
+  background: rgba(0, 188, 212, 0.15);
+  color: #00bcd4;
+}
+
+
+.home_banner_heading{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'SportStars';
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+  
+}
+
+.home_banner_heading span{
+  color: var(--p);
+}
+
+.home-banner p{
+      font-size: 23px;
+    color: #fff;
+    text-align: center;
+    font-family: 'SpaceGrotesk';
+}
+
+.home-banner {
+    background-image: url(../img/home-ban.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* padding: 100px 0; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 36%) 0 0 0 1000px inset;
+    box-shadow: rgb(0 0 0 / 46%) 0 0 0 1000px inset;
+}
+.tournament-name {
+    font-family: 'SpaceGrotesk';
+}
+
+.bg-black {
+    background-color: var(--bg) !important;
+}
