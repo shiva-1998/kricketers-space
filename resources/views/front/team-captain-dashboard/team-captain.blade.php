@@ -1,8 +1,4 @@
 @include('front.includes.header-links')
-
-
-
-
 <section class="container-fluid captain-dashboard-section">
     <header class="d-flex justify-content-between align-items-center m3-4 p-3">
         <div class="logo  ps-3">
