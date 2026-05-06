@@ -352,7 +352,8 @@
                                         <span>{{ $registeredCount }}/{{ $tournament->slots }}</span><small>Teams</small>
                                     </div>
                                 </div>
-
+<div class="mt-3">
+    
                                 @auth
                                     @php
                                         $alreadyJoined = \App\Models\Payment::where('player_id', auth()->id())
@@ -371,11 +372,12 @@
                                         </a>
                                     @endif
                                 @else
-                                    <a href="{{ route('sign-in') }}" class="cta1 w-100 mt-3">
+                                    <a href="{{ route('sign-in') }}" class="cta1  w-100 mt-3">
                                         Register Team
                                     </a>
                                 @endauth
 
+</div>
                             </div>
                         </div>
                     </div>

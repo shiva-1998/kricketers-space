@@ -7,8 +7,10 @@ use App\Http\Controllers\Frontend\UserController;
 
 Route::get('', [HomeController::class, 'index'])->name('home');
 Route::get('tournaments', [HomeController::class, 'tournaments'])->name('tournaments');
-
-
+Route::get('grounds', [HomeController::class, 'grounds'])->name('grounds');
+Route::get('teams', [HomeController::class, 'teams'])->name('teams');
+Route::get('grounds-purchase', [HomeController::class, 'groundsPurchase'])->name('grounds-purchase');
+Route::get('score', [HomeController::class, 'score'])->name('score');
 
 
 Route::get('/register', [HomeController::class, 'register'])->name('register');
@@ -30,8 +32,11 @@ Route::get('/team-captain-matches', [HomeController::class, 'teamcaptainmatches'
 Route::get('/team-captain-tournaments', [HomeController::class, 'teamcaptaintournaments'])->name('team-captain-tournaments');
 Route::get('/team-captain-players', [HomeController::class, 'teamcaptainplayers'])->name('team-captain-players');
 Route::get('/team-captain-profile', [HomeController::class, 'teamcaptainprofile'])->name('team-captain-profile');
+Route::get('/404', [HomeController::class, 'fourzerofour'])->name('user.404');
 
-
+Route::fallback(function () {
+    return redirect()->route('user.404');
+});
 
 Route::post('/save-role', [UserController::class, 'saveRole'])->name('user.role');
 Route::post('/user-sign-up', [UserController::class, 'userSignup'])->name('user-signup');

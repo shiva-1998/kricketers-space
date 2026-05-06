@@ -1,0 +1,112 @@
+/* Body/Background for presentation purposes */
+
+
+/* Main Container */
+.booking-container {
+    background-color: #081a24;
+    width: 100%;
+   
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    font-family: "SpaceGrotesk";
+}
+
+/* Header Image */
+.stadium-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* Typography Colors */
+.text-location {
+    color: #6a8b96;
+    font-size: 0.95rem;
+}
+.text-amenities {
+    color: #e2e8f0;
+    font-size: 0.9rem;
+}
+.custom-divider {
+    border-color: #1a3644;
+    opacity: 1;
+}
+
+/* Scrollbar Hiding for Horizontal Lists */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Date Buttons */
+.custom-btn-date {
+    background: transparent;
+    color: #a0b3bb;
+    border: none;
+    border-radius: 0;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+.custom-btn-date:hover {
+    color: #ffffff;
+}
+.custom-btn-date.active {
+    background-color: #00ff88;
+    color: #000;
+}
+
+/* Time Slot Buttons */
+.custom-btn-time {
+    background: transparent;
+    color: #a0b3bb;
+    border: none;
+    border-radius: 0;
+    padding: 8px 12px;
+    min-width: 110px;
+}
+.custom-btn-time .time {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+.custom-btn-time .price {
+    font-size: 0.8rem;
+    color: #8a9ba3;
+}
+.custom-btn-time.active {
+    background-color: #ff6d00;
+}
+.custom-btn-time.active .time, 
+.custom-btn-time.active .price {
+    color: #000;
+}
+.custom-btn-time.disabled {
+    opacity: 0.4;
+}
+
+/* Remove default Bootstrap focus shadows */
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Confirm Button with Slanted Corner */
+.confirm-btn {
+    background-color: #00bcd4;
+    color: #000;
+    border-radius: 0;
+    padding: 16px;
+    border: none;
+    /* This creates the slanted top-right corner effect */
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+    transition: background-color 0.2s ease;
+    max-width: 50%;
+}
+.confirm-btn:hover {
+    background-color: #00a4b8;
+    color: #000;
+}

@@ -31,6 +31,29 @@ class HomeController extends Controller
 
       return view('front.tournaments');
    }
+   
+
+
+   public function grounds()
+   {
+      return view('front.grounds');
+   }
+
+   public function teams()
+   {
+      return view('front.teams');
+   }
+
+   public function groundsPurchase()
+   {
+      return view('front.grounds-purchase');
+   }
+
+   public function score()
+   {
+      return view('front.score');
+   }  
+
 
    public function register()
    {
@@ -129,6 +152,11 @@ public function teamcaptainprofile()
    return view('front.team-captain-dashboard.profile');
 }
 
+public function fourzerofour()
+{
+    return response()
+        ->view('front.404', [], 404);
+}
    // ==================================================================================================================================
    public function pay($id)
    {

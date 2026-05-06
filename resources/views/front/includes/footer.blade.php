@@ -1,4 +1,82 @@
+<a class="whats-app pulse" href="https://api.whatsapp.com/send?phone=919948502053&text=" target="_blank">
+    <!-- <i class="fa fa-whatsapp"></i> -->
+    <i class="fa-brands fa-whatsapp my-float"></i>
+</a>
+<style>
+     .pulse i {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .pulse {
+        background: #31f314;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .pulse::before {
+        content: "";
+        position: absolute;
+        width: calc(100% + 40px);
+        height: calc(100% + 40px);
+        border: 2px solid #31f314;
+        border-radius: 50%;
+        animation: animate 1.5s linear infinite;
+    }
+
+    .pulse::after {
+        content: "";
+        position: absolute;
+        width: calc(100% + 40px);
+        height: calc(100% + 40px);
+        border: 2px solid #31f314;
+        border-radius: 50%;
+        animation: animate 1.5s linear infinite;
+        animation-delay: 0.4s;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+
+        50% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1.4);
+            opacity: 0;
+        }
+    }
+
+
+    .whats-app {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 15px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+    }
+</style>
 <footer class="custom-footer pt-5 pb-4">
+
+
+
   <div class="container">
     <div class="row gx-5">
       <div class="col-lg-4 col-md-12 mb-4">
